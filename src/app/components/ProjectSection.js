@@ -23,7 +23,7 @@ const ProjectSection = () => {
 
         <ProjectTag name="Web" isSelected={tag === 'Web'} onClick={()=>handleTagChange('Web')} />
       </div>
-      <div className='grid md:grid-cols-4 gap-8 md:gap-4'>
+      <div className='grid md:grid-cols-3 gap-8 md:gap-4'>
         {filterProjects.map((project,index)=>(
             <div key={index}>
                 <ProjectCard imgUrl={project.image} title={project.title} description={project.description} gitCodeUrl = {project.gitCodeUrl} previewUrl={project.previewUrl} />

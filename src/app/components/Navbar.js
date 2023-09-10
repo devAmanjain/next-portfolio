@@ -6,6 +6,7 @@ import {navLinks} from '../data';
 import { Bars3Icon } from '@heroicons/react/20/solid';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import MenuOverlay from './MenuOverlay'
+import Image from 'next/image';
 const Navbar = () => {
 
   const [navbarOpen , setNavbarOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className='fixed z-10  bg-[#121212] bg-opacity-100 top-0 left-0 right-0'>
       <div className='flex flex-wrap justify-between items-center mx-auto px-8 py-4 text-white'>
-        <Link href={"/"} className='md:text-5xl text-2xl font-semibold text-white '>LOGO </Link>
+        <Link href={"/"} className='md:text-5xl text-2xl font-semibold text-white '><Image src='/images/main.png' width = {80} height={80}></Image> </Link>
         <div className='mobile-menu md:hidden block'>
           {!navbarOpen ? (
                <button className='text-slate-200'>

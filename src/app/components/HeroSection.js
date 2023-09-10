@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation';
-
+import Link from "next/link";
 const HeroSection = () => {
   return (
     <section>
@@ -18,11 +18,9 @@ const HeroSection = () => {
                 sequence={[
                   // Same substring at the start will only be typed out once, initially
                   'Aman Jain',
-                 
                   1000,
                   'Web Developer',
-                  1000,
-                  'Software Developer',
+                  '👨‍💻 Software Developer.🚀',
                   1000
                 ]}
                 wrapper="span"
@@ -32,17 +30,18 @@ const HeroSection = () => {
               /> 
           </h1>
           <p className="text-white sm:text-lg lg:text-xl mb-6 text-base">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry
           </p>
         
         <div className="text-white font-mono">
-          <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-[#ffffff] hover:bg-slate-100 mb-4 bg-gradient-to-br from-blue-800 via-red-500 to-purple-400 ">
+          {/* <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-[#ffffff] hover:bg-slate-100 mb-4 bg-gradient-to-br from-blue-800 via-red-500 to-purple-400 ">
             Hire Me
-          </button>
-          <button className="px-6 py-3 w-full  sm:w-fit rounded-full bg-[#ffffff] hover:bg-slate-500 sm:mt-4 bg-gradient-to-br from-blue-800 via-red-500 to-purple-400">
-            Download CV
-          </button>
+          </button> */}
+          <Link href="/Aman_CV.docx">
+            <button className="px-6 py-3 w-full  sm:w-fit rounded-full bg-[#ffffff] hover:bg-slate-500 sm:mt-4 bg-gradient-to-br from-blue-800 via-red-500 to-purple-400">
+              Download CV
+            </button>  
+          </Link>
+          
         </div>
         </div>
         <div className="col-span-5  mt-4 lg:mt-8">

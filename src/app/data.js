@@ -54,7 +54,7 @@ export const projectData = [
         id:1,
         title:'React Portfolio Website',
         description:'Own Portfolio',
-        image:'images/laptop.png',
+        image:'images/project1.png',
         tag:["All"],
         gitCodeUrl:'/',
         previewUrl:'/'
@@ -63,7 +63,7 @@ export const projectData = [
         id:2,
         title:'Exam Interview Portal',
         description:'Exam Portal',
-        image:'images/laptop.png',
+        image:'images/project2.png',
         tag:["All",'Web'],
         gitCodeUrl:'/',
         previewUrl:'/'
@@ -72,7 +72,7 @@ export const projectData = [
         id:3,
         title:'Nova Cms',
         description:'Church Cms',
-        image:'images/laptop.png',
+        image:'images/project3.png',
         tag:["All"],
         gitCodeUrl:'/',
         previewUrl:'/'
@@ -81,7 +81,7 @@ export const projectData = [
         id:4,
         title:'HDFC Credila',
         description:'Education Calculator',
-        image:'images/laptop.png',
+        image:'images/project4.png',
         tag:["All",'Web'],
         gitCodeUrl:'/',
         previewUrl:'/'
@@ -90,7 +90,7 @@ export const projectData = [
         id:5,
         title:'SK Finance',
         description:'Finance',
-        image:'images/laptop.png',
+        image:'images/project5.png',
         tag:["All",'Web'],
         gitCodeUrl:'/',
         previewUrl:'/'
@@ -99,7 +99,7 @@ export const projectData = [
         id:6,
         title:'Samraddh MicroFinance',
         description:'SBMFA MicroFinance',
-        image:'images/laptop.png',
+        image:'images/project6.png',
         tag:["All",'Web'],
         gitCodeUrl:'/',
         previewUrl:'/'

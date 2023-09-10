@@ -1,12 +1,17 @@
 "use client"
-import React from "react";
+import React,{useState} from "react";
 import GithubIcon from "../../../public/social_icon/github.svg";
 import LinkedIn from "../../../public/social_icon/linked-in.svg";
+import Medium from "../../../public/social_icon/medium.svg";
+import Twitteer from "../../../public/social_icon/twitter.svg";
 import Link from "next/link";
 import Image from "next/image";
+import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
+import { EnvelopeIcon } from "@heroicons/react/20/solid";
 
 const EmailSection = () => {
 
+  const [emailSend,setEmailSend] = useState(false);
     const handleSubmit = async (e) => {
         e.preventDefault();
         
@@ -25,6 +30,7 @@ const EmailSection = () => {
           })
             .then((response) => {
               if (response.status === 200) {
+                setEmailSend(true);
                 return response.json();
               } else {
                 throw new Error('Failed to send data.');
@@ -40,7 +46,7 @@ const EmailSection = () => {
         
     }
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 ">
+    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 " id="contact">
         <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-0  transform -translate-x-1/2 -translate-1/4"></div>
       <div className="z-10 ">
         <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
@@ -51,25 +57,77 @@ const EmailSection = () => {
           to extend greetings, I will make every effort to promptly respond.😊📩
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="/">
+          <Link href="https://github.com/Amanj881">
             <Image
               src={GithubIcon}
               alt="social_icon"
-              width={80}
-              height={80}
+              width={50}
+              height={50}
               className=""
+              title="github"
+
             />
            
           </Link>
-          <Link href="/">
+          <Link href="https://www.linkedin.com/in/aman-jain09/">
           <Image
               src={LinkedIn}
               alt="social_icon"
-              width={80}
-              height={80}
+              width={50}
+              height={50}
+              className=""
+              title="linked-in"
+
+            />
+          </Link>
+          <Link href="https://medium.com/@amanj0314">
+          <Image
+              src={Medium}
+              alt="social_icon"
+              width={50}
+              height={50}
+              className=""
+              title="medium"
+
+            />
+          </Link>
+          <Link href="https://twitter.com/WebTechSol3679">
+          <Image
+              src={Twitteer}
+              alt="social_icon"
+              title="twitter"
+              width={50}
+              height={50}
               className=""
             />
           </Link>
+        </div>
+        <div className="text-white py-8 text-xl font-semibold">
+          Contact Details
+          <div className="flex flex-row">
+              <div>
+              <DevicePhoneMobileIcon className="w-12 h-15 py-4" />
+              </div>
+              <div className="py-7 px-4 text-base">
+              <span>
+              9685924231
+              </span>
+              </div>
+             
+          </div>
+
+          <div className="flex flex-row">
+              <div>
+              <EnvelopeIcon className="w-12 h-15 py-4" />
+              </div>
+              <div className="py-7 px-4 text-base">
+              <span>
+              devaman091996@gmail.com
+              </span>
+              </div>
+             
+          </div>
+           
         </div>
       </div>
       <div>
@@ -113,6 +171,7 @@ Message          </label>
 
           <button className="bg-purple-800 rounded-lg text-white text-lg py-4">Send Message</button>
         </form>
+        {emailSend && <span className="text-green-700 text-base ">Message Send SuccessFully...</span>}
       </div>
     </section>
   );
