@@ -27,7 +27,7 @@ const ProjectSection = () => {
         {filterProjects.map((project,index)=>(
             <div key={index}>
                 <ProjectCard imgUrl={project.image} title={project.title} description={project.description} gitCodeUrl = {project.gitCodeUrl} previewUrl={project.previewUrl} />
-                </div>
+            </div>
         ))}
         
       </div>
