@@ -54,9 +54,9 @@ export const projectData = [
         id:1,
         title:'React Portfolio Website',
         description:'Own Portfolio',
-        image:'images/project1.png',
+        image:'images/laptop.png',
         tag:["All"],
-        gitCodeUrl:'/',
+        gitCodeUrl:'https://github.com/Amanj881/next-portfolio.git',
         previewUrl:'/'
     },
     {
@@ -65,8 +65,8 @@ export const projectData = [
         description:'Exam Portal',
         image:'images/project2.png',
         tag:["All",'Web'],
-        gitCodeUrl:'/',
-        previewUrl:'/'
+        gitCodeUrl:'',
+        previewUrl:''
     },
     {
         id:3,
@@ -74,8 +74,8 @@ export const projectData = [
         description:'Church Cms',
         image:'images/project3.png',
         tag:["All"],
-        gitCodeUrl:'/',
-        previewUrl:'/'
+        gitCodeUrl:'',
+        previewUrl:''
     },
     {
         id:4,
@@ -83,8 +83,8 @@ export const projectData = [
         description:'Education Calculator',
         image:'images/project4.png',
         tag:["All",'Web'],
-        gitCodeUrl:'/',
-        previewUrl:'/'
+        gitCodeUrl:'',
+        previewUrl:''
     },
     {
         id:5,
@@ -92,17 +92,26 @@ export const projectData = [
         description:'Finance',
         image:'images/project5.png',
         tag:["All",'Web'],
-        gitCodeUrl:'/',
-        previewUrl:'/'
+        gitCodeUrl:'',
+        previewUrl:''
     },
     {
         id:6,
         title:'Samraddh MicroFinance',
         description:'SBMFA MicroFinance',
-        image:'images/project6.png',
+        image:'images/sbmfa.png',
         tag:["All",'Web'],
-        gitCodeUrl:'/',
-        previewUrl:'/'
+        gitCodeUrl:'',
+        previewUrl:'https://uatsamraddh.host4india.in'
+    },
+    {
+        id:7,
+        title:'Sri Saathi',
+        description:'Sri Saathi MicroFinance',
+        image:'images/sri.png',
+        tag:["All",'Web'],
+        gitCodeUrl:'',
+        previewUrl:'https://srisaathi.host4india.in/login'
     },
 ]
 export default {navLinks,tabs,projectData};
