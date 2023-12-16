@@ -36,7 +36,7 @@ const HeroSection = () => {
           {/* <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-[#ffffff] hover:bg-slate-100 mb-4 bg-gradient-to-br from-blue-800 via-red-500 to-purple-400 ">
             Hire Me
           </button> */}
-          <Link href="/Aman_jain_cv.pdf">
+          <Link href="/Aman_Software_Developer.pdf">
             <button className="px-6 py-3 w-full  sm:w-fit rounded-full bg-[#ffffff] hover:bg-slate-500 sm:mt-4 bg-gradient-to-br from-blue-800 via-red-500 to-purple-400">
               Download CV
             </button>  
