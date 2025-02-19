@@ -8,8 +8,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
-
+import GlassIcons from './GlassIcons'
+import { FaLinkedin, FaGithub, FaMediumM , FaTwitter } from 'react-icons/fa';
+import { VscGithubAlt } from "react-icons/vsc";
 const EmailSection = () => {
+  const items = [
+    { icon: <FaLinkedin size={70} />, color: 'blue', label: 'LiknedIn', href:"https://www.linkedin.com/in/aman-jain09/" },
+    { icon: <VscGithubAlt  size={70}/>, color: 'gray', label: 'Github',href:"https://github.com/Amanj881" },
+    { icon: <FaMediumM   size={70}/>, color: 'white', label: 'Medium',href:"https://medium.com/@amanj0314" },
+    { icon: <FaTwitter  size={70}/>, color: 'white', label: 'Twitter' , href:"https://twitter.com/WebTechSol3679"},
+  
+  ];
 
   const [emailSend,setEmailSend] = useState(false);
     const handleSubmit = async (e) => {
@@ -46,7 +55,7 @@ const EmailSection = () => {
         
     }
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 " id="contact">
+    <section className="grid md:grid-cols-2 my-12 md:my-12 gap-4 " id="contact">
         <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-0  transform -translate-x-1/2 -translate-1/4"></div>
       <div className="z-10 ">
         <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
@@ -56,53 +65,11 @@ const EmailSection = () => {
           readily accessible to all. Whether you have a question or simply wish
           to extend greetings, I will make every effort to promptly respond.😊📩
         </p>
-        <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/Amanj881">
-            <Image
-              src={GithubIcon}
-              alt="social_icon"
-              width={50}
-              height={50}
-              className=""
-              title="github"
-
-            />
-           
-          </Link>
-          <Link href="https://www.linkedin.com/in/aman-jain09/">
-          <Image
-              src={LinkedIn}
-              alt="social_icon"
-              width={50}
-              height={50}
-              className=""
-              title="linked-in"
-
-            />
-          </Link>
-          <Link href="https://medium.com/@amanj0314">
-          <Image
-              src={Medium}
-              alt="social_icon"
-              width={50}
-              height={50}
-              className=""
-              title="medium"
-
-            />
-          </Link>
-          <Link href="https://twitter.com/WebTechSol3679">
-          <Image
-              src={Twitteer}
-              alt="social_icon"
-              title="twitter"
-              width={50}
-              height={50}
-              className=""
-            />
-          </Link>
-        </div>
-        <div className="text-white py-8 text-xl font-semibold">
+        <div style={{ height: '300px', position: 'relative',width:'300px '}}>
+                <GlassIcons items={items} className="custom-class"/>
+              </div>
+          
+        {/* <div className="text-white py-8 text-xl font-semibold">
           Contact Details
           <div className="flex flex-row">
               <div>
@@ -128,7 +95,7 @@ const EmailSection = () => {
              
           </div>
            
-        </div>
+        </div> */}
       </div>
       <div>
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>

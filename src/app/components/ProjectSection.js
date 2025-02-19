@@ -1,38 +1,56 @@
 "use client";
-import React,{useState} from 'react'
+import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import {projectData} from '../data'
-import projectTag from './ProjectTag';
+import { projectData } from '../data';
 import ProjectTag from './ProjectTag';
+
 const ProjectSection = () => {
-
-  const [tag,setTag] = useState('All');
-
-  const handleTagChange = (id) =>{
-    setTag(id)
-  }
-
-  const filterProjects = projectData.filter((project)=>{
-    return project.tag.includes(tag);
-  });
   return (
-    <div id="projects">
-      <h1 className='text-white text-4xl font-extrabold'>My Projects</h1>
-      <div className='text-white flex flex-row justify-center items-center gap-2 py-6'>
-        <ProjectTag name="All" isSelected={tag === 'All'} onClick={()=>handleTagChange('All')} />
+    <section id="projects" className="py-24 ">
+      <div className="container mx-auto px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold text-text text-center mb-12"
+        >
+          My Projects
+        </motion.h2>
 
-        <ProjectTag name="Web" isSelected={tag === 'Web'} onClick={()=>handleTagChange('Web')} />
-      </div>
-      <div className='grid md:grid-cols-3 gap-8 md:gap-4'>
-        {filterProjects.map((project,index)=>(
-            <div key={index}>
-                <ProjectCard imgUrl={project.image} title={project.title} description={project.description} gitCodeUrl = {project.gitCodeUrl} previewUrl={project.previewUrl} />
-            </div>
-        ))}
-        
-      </div>
-    </div>
-  )
-}
+        <div className="flex justify-center gap-4 mb-12">
+          <ProjectTag
+            name="All"
+            isSelected={true}
+            onClick={() => {}}
+          />
+          <ProjectTag
+            name="Web"
+            isSelected={false}
+            onClick={() => {}}
+          />
+        </div>
 
-export default ProjectSection
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projectData.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+            >
+              <ProjectCard
+                imgUrl={project.image}
+                title={project.title}
+                description={project.description}
+                gitCodeUrl={project.gitCodeUrl}
+                previewUrl={project.previewUrl}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectSection;
